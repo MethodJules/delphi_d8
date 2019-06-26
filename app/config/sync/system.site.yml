@@ -1,0 +1,14 @@
+uuid: ce81ebae-1590-4f98-a800-1531a600b9bd
+name: delphi_d8
+mail: hoferj@uni-hildesheim.de
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
