@@ -1,0 +1,5 @@
+delphi-boxplot:
+  version: 1.x
+  css:
+    layout:
+      css/boxplot.css: {}

@@ -1,0 +1,20 @@
+delphi.content:
+  path: 'delphi/content'
+  defaults:
+    _controller: 'Drupal\delphi\Controller\DelphiController::content'
+  requirements:
+    _access: 'TRUE'
+
+delphi.page:
+  path: 'delphi/page'
+  defaults:
+    _controller: 'Drupal\delphi\Controller\DelphiController::page'
+  requirements:
+    _access: 'TRUE'
+
+delphi.boxplot:
+  path: 'delphi/boxplot'
+  defaults:
+    _controller: 'Drupal\delphi\Controller\DelphiController::createBoxplot'
+  requirements:
+    _access: 'TRUE'

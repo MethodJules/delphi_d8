@@ -1,0 +1,38 @@
+version: '3'
+networks:
+  private:
+  public:
+    external:
+      name: traefik_webgateway
+services:
+  db:
+    image: mariadb:10.2
+    environment:
+      MYSQL_DATABASE: delphi_d8
+      MYSQL_ROOT_PASSWORD: delphi_d8
+    networks:
+      - private
+    labels:
+      - traefik.enable=false
+    volumes:
+      - db_data:/var/lib/mysql
+      #- ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    restart: always
+  drupal:
+    depends_on:
+      - db
+    build: .
+    labels:
+      - traefik.backend=drupal
+      - traefik.docker.network=traefik_webgateway
+      - traefik.frontend.rule=Host:delphi.localhost
+    networks:
+      - private
+      - public
+    #ports:
+    #  - "8080:80"
+    volumes:
+      - ./app:/app
+    restart: always
+volumes:
+  db_data:

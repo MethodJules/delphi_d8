@@ -1,0 +1,28 @@
+{{ attach_library('delphi/delphi-boxplot') }}
+<div id="eins">
+    <div id="boxplot-container" class="boxplot">
+        <div class="box linie"></div>
+        <div class="box whisker"></div>
+        {# To ensure that numbers and the decimal point is correct used we us the number_format() #}
+        <div class="box interquart" style="left: {{ first_quantil_percent|number_format(1) }}%"></div>
+        <div class="box thirdquant" style="left: calc({{ third_quantil2|number_format(1) }}% + {{ first_quantil_percent|number_format(1) }}%); width: {{ third_quantil2|number_format(1) }}%; margin-left: -{{ third_quantil2|number_format(1) }}%"></div>
+        <div class="box median" style="left: {{ median_percent|number_format(1) }}%"></div>
+        <div class="box mittel" style="left: {{ avg_percent|number_format(1) }}%"></div>
+        <span class="schild s_min" style="left: 0%">min</span>
+        <span class="schild s_average" style="margin-left: {{ avg_percent|number_format(1) }}%">{{ avg_absolut }}</span>
+        <span class="schild s_median" style="margin-left: {{ median_percent|number_format(1) }}%">{{ median_absolut }}</span>
+        <span class="schild s_third_quantil" style="margin-left: {{ third_quantil_percent|number_format(1) }}%">{{ third_quantil_absolut }}</span>
+        <span class="schild s_first_quantil" style="margin-left: {{ first_quantil_percent|number_format(1) }}%">{{ first_quantil_absolut }}</span>
+        <span class="schild min s_max" style="margin-left: 100%">max</span>
+    </div>
+    <div id="boxplot-legend-container" class="legend">
+        <div class="item-list">
+            <ul class="my-list">
+                <li class="first">unteres Quartil</li>
+                <li>Mittelwert</li>
+                <li>Median</li>
+                <li class="last">oberes Quartil</li>
+            </ul>
+        </div>
+    </div>
+</div>
