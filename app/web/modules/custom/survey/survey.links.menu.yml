@@ -1,0 +1,17 @@
+
+# Question entity menu items definition
+entity.question_entity.collection:
+  title: 'Question entity list'
+  route_name: entity.question_entity.collection
+  description: 'List Question entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Question entity type menu items definition
+entity.question_entity_type.collection:
+  title: 'Question entity type'
+  route_name: entity.question_entity_type.collection
+  description: 'List Question entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99

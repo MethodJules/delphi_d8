@@ -1,0 +1,6 @@
+uuid: 8ae551bd-b2e0-41a4-8fff-d9412b9b1a41
+langcode: en
+status: true
+dependencies: {  }
+id: single_choice
+label: 'Single choice'

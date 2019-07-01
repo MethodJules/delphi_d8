@@ -1,0 +1,22 @@
+uuid: d8f76ba2-6bce-4e88-b49f-35df47560de5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_message_welcome
+    - node.type.survey
+  module:
+    - text
+id: node.survey.field_message_welcome
+field_name: field_message_welcome
+entity_type: node
+bundle: survey
+label: 'Welcome message'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

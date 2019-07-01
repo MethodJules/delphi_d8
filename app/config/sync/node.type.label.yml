@@ -1,0 +1,17 @@
+uuid: 632c93e9-61c2-4913-9ab6-0898b38698c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Label
+type: label
+description: 'A set of question labels'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,28 @@
+uuid: a8f22ed6-78bf-4691-849b-0683b8c89a0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question_entity.field_answers
+    - node.type.answer
+    - survey.question_entity_type.single_choice
+id: question_entity.single_choice.field_answers
+field_name: field_answers
+entity_type: question_entity
+bundle: single_choice
+label: answers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      answer: answer
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

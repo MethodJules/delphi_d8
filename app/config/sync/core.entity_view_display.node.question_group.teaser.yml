@@ -1,0 +1,20 @@
+uuid: 502a34ae-429b-47ef-8123-b8c79d0f3885
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.question_group
+  module:
+    - user
+id: node.question_group.teaser
+targetEntityType: node
+bundle: question_group
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

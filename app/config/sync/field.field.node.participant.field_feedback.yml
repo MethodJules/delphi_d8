@@ -1,0 +1,19 @@
+uuid: 097913b0-8966-4ae4-9434-4dfa70a90dab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feedback
+    - node.type.participant
+id: node.participant.field_feedback
+field_name: field_feedback
+entity_type: node
+bundle: participant
+label: 'Participant''s feedback'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

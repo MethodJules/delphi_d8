@@ -1,4 +1,5 @@
 module:
+  auto_entitylabel: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -23,6 +24,7 @@ module:
   help: 0
   history: 0
   image: 0
+  inline_entity_form: 0
   link: 0
   menu_ui: 0
   node: 0
@@ -33,9 +35,11 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
+  survey: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0

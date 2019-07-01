@@ -1,0 +1,18 @@
+uuid: 195c280b-6b06-46d6-bf8b-3f1b8b344d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.participant
+id: node.participant.title
+field_name: title
+entity_type: node
+bundle: participant
+label: Token
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

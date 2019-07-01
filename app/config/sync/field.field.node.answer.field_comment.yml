@@ -1,0 +1,19 @@
+uuid: 36bd7708-e94a-480c-a4c5-313e249003c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comment
+    - node.type.answer
+id: node.answer.field_comment
+field_name: field_comment
+entity_type: node
+bundle: answer
+label: comment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

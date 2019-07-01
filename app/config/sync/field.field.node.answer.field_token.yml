@@ -1,0 +1,19 @@
+uuid: da0949c9-5743-4d18-8cb5-a0de9a48b9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_token
+    - node.type.answer
+id: node.answer.field_token
+field_name: field_token
+entity_type: node
+bundle: answer
+label: token
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

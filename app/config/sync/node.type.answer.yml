@@ -1,0 +1,17 @@
+uuid: 5b2e03cb-e704-40ee-80e7-295b4ff571fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Answer
+type: answer
+description: 'Stores participant''s answers and comments for a question'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

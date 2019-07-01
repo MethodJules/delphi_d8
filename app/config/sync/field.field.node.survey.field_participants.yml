@@ -1,0 +1,28 @@
+uuid: d543f815-1f69-43a7-a0e3-2d7d810f5a5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_participants
+    - node.type.participant
+    - node.type.survey
+id: node.survey.field_participants
+field_name: field_participants
+entity_type: node
+bundle: survey
+label: Participants
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      participant: participant
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

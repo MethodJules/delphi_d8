@@ -1,0 +1,17 @@
+uuid: 4331ea30-e907-413d-b6c6-22c115ce35dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Participant
+type: participant
+description: 'Survey participants (tokens)'
+help: "Information about a survey participant in form of an access token.\r\n(For future use, may add valid from-until, completions status, reminder, ...)"
+new_revision: true
+preview_mode: 1
+display_submitted: false

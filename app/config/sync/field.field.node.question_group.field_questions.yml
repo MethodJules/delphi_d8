@@ -1,0 +1,32 @@
+uuid: 3e512bbc-228f-4ac6-b213-6b201866c5f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_questions
+    - node.type.question_group
+    - survey.question_entity_type.single_choice
+    - survey.question_entity_type.text
+    - survey.question_entity_type.year
+id: node.question_group.field_questions
+field_name: field_questions
+entity_type: node
+bundle: question_group
+label: questions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:question_entity'
+  handler_settings:
+    target_bundles:
+      single_choice: single_choice
+      text: text
+      year: year
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: single_choice
+field_type: entity_reference

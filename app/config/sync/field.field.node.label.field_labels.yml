@@ -1,0 +1,19 @@
+uuid: 917203e7-7b64-4234-9138-4a88349f31c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_labels
+    - node.type.label
+id: node.label.field_labels
+field_name: field_labels
+entity_type: node
+bundle: label
+label: Labels
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

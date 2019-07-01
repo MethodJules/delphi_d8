@@ -1,0 +1,25 @@
+uuid: 77a062ca-fa16-4956-a70e-79485bf7cc33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.question_group.field_questions
+    - node.type.question_group
+  module:
+    - user
+id: node.question_group.default
+targetEntityType: node
+bundle: question_group
+mode: default
+content:
+  field_questions:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  links: true

@@ -1,0 +1,27 @@
+uuid: af05553d-96f6-4137-acc6-16b8f50bcd87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.participant.field_feedback
+    - node.type.participant
+  module:
+    - user
+id: node.participant.default
+targetEntityType: node
+bundle: participant
+mode: default
+content:
+  field_feedback:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

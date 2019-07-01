@@ -1,0 +1,17 @@
+uuid: e27c0fd2-b767-431a-9b93-702c86313aff
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Question group'
+type: question_group
+description: 'Used to group questions. Every question group is displayed on a seperate page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

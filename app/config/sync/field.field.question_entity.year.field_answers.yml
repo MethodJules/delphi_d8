@@ -1,0 +1,28 @@
+uuid: 643848f5-ee50-401f-bdcb-59f140b9dfa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question_entity.field_answers
+    - node.type.answer
+    - survey.question_entity_type.year
+id: question_entity.year.field_answers
+field_name: field_answers
+entity_type: question_entity
+bundle: year
+label: answers
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      answer: answer
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

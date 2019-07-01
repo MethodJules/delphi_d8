@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * @file
+ * Contains survey.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function survey_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the survey module.
+    case 'help.page.survey':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides custom entity types to manage surveys.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function survey_theme() {
+  $theme = [];
+  $theme['question_entity'] = [
+    'render element' => 'elements',
+    'file' => 'question_entity.page.inc',
+    'template' => 'question_entity',
+  ];
+  $theme['question_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'question_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function survey_theme_suggestions_question_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#question_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'question_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'question_entity__' . $entity->bundle();
+  $suggestions[] = 'question_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'question_entity__' . $entity->id();
+  $suggestions[] = 'question_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_inline_entity_form_table_fields_alter().
+ */
+function survey_inline_entity_form_table_fields_alter(&$fields, $context) {
+  if ($context['parent_entity_type'] === 'question_entity') {
+    unset($fields['status']);
+  } elseif ($context['field_name'] === 'field_pages') {
+    unset($fields['status']);
+  }
+
+}
+
+/**
+ * Implements hook_inline_entity_form_entity_form_alter().
+ */
+function survey_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+  if ($entity_form['#entity_type'] === 'question_entity') {
+    $entity_form['revision_log_message']['#access'] = false;
+    /*unset($entity_form['revision_log']);
+    unset($entity_form['revision_log_message']);*/
+
+
+  }
+
+}
+
+/**
+ * Implements hook_inline_entity_form_reference_form_alter().
+ */
+function survey_inline_entity_form_reference_form_alter(&$reference_form, &$form_state) {
+  $asd = 0;
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function survey_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'survey/survey-general';
+}
+

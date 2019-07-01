@@ -1,0 +1,35 @@
+uuid: d94addeb-155d-4adb-83ad-4483cbee85fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.label.field_labels
+    - node.type.label
+id: node.label.default
+targetEntityType: node
+bundle: label
+mode: default
+content:
+  field_labels:
+    weight: 1
+    settings:
+      size: 100
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 100
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,17 @@
+uuid: 6daafe7b-ab9b-4d0f-9e42-57d43a2b4b63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.label.field_labels
+    - node.type.label
+  module:
+    - user
+id: node.label.default
+targetEntityType: node
+bundle: label
+mode: default
+content: {  }
+hidden:
+  field_labels: true
+  links: true

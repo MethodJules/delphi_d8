@@ -1,0 +1,44 @@
+uuid: 1070a241-2858-4139-8d0e-40900c613109
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.answer.field_comment
+    - field.field.node.answer.field_token
+    - node.type.answer
+id: node.answer.default
+targetEntityType: node
+bundle: answer
+mode: default
+content:
+  field_comment:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_token:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

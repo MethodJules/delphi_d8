@@ -1,0 +1,45 @@
+uuid: d3ed8cc7-f524-4aa8-94d3-ff65bb63544e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.question_group.field_questions
+    - node.type.question_group
+  module:
+    - inline_entity_form
+id: node.question_group.default
+targetEntityType: node
+bundle: question_group
+mode: default
+content:
+  field_questions:
+    weight: 26
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

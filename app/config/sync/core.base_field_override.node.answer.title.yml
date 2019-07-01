@@ -1,0 +1,18 @@
+uuid: cae0a35b-28bb-4787-8d7d-0b598f08860a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.answer
+id: node.answer.title
+field_name: title
+entity_type: node
+bundle: answer
+label: Answer
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

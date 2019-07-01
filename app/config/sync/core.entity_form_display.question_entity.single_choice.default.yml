@@ -1,0 +1,45 @@
+uuid: 1a782722-5a24-48ed-8678-c0bff8c97a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.question_entity.single_choice.field_answers
+    - field.field.question_entity.single_choice.field_labels
+    - survey.question_entity_type.single_choice
+  module:
+    - inline_entity_form
+id: question_entity.single_choice.default
+targetEntityType: question_entity
+bundle: single_choice
+mode: default
+content:
+  field_labels:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: label
+      label_plural: labels
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  name:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_answers: true
+  status: true
+  user_id: true

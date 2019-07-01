@@ -1,0 +1,23 @@
+uuid: 5d099e8d-66af-4b02-9c26-7631da5276a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.question_entity.year.field_answers
+    - survey.question_entity_type.year
+id: question_entity.year.default
+targetEntityType: question_entity
+bundle: year
+mode: default
+content:
+  name:
+    label: hidden
+    type: basic_string
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_answers: true
+  status: true
+  user_id: true

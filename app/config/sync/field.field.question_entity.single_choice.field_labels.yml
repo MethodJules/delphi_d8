@@ -1,0 +1,28 @@
+uuid: a78252d0-cc72-437c-8ada-e319b4daa55c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question_entity.field_labels
+    - node.type.label
+    - survey.question_entity_type.single_choice
+id: question_entity.single_choice.field_labels
+field_name: field_labels
+entity_type: question_entity
+bundle: single_choice
+label: Labels
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      label: label
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 62340b2f-fbc1-40d8-b99e-84379f686224
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.label
+  module:
+    - user
+id: node.label.teaser
+targetEntityType: node
+bundle: label
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

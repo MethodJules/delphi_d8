@@ -1,0 +1,5 @@
+survey-general:
+  version: 1.x
+  css:
+    layout:
+      css/survey.css: {}

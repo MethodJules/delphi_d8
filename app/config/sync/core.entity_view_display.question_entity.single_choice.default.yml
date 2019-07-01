@@ -1,0 +1,32 @@
+uuid: ae846ce8-a83e-48f8-926c-9427d4db7139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.question_entity.single_choice.field_answers
+    - field.field.question_entity.single_choice.field_labels
+    - survey.question_entity_type.single_choice
+id: question_entity.single_choice.default
+targetEntityType: question_entity
+bundle: single_choice
+mode: default
+content:
+  field_labels:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  name:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_answers: true
+  status: true
+  user_id: true

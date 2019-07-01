@@ -1,0 +1,22 @@
+uuid: ab9152f6-7519-40c3-9775-1502515a8b01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_message_end
+    - node.type.survey
+  module:
+    - text
+id: node.survey.field_message_end
+field_name: field_message_end
+entity_type: node
+bundle: survey
+label: 'End message'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
